@@ -1,388 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Edu - Join Our Movement</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'dynamic-blue': '#00a8ff',
-                        'dynamic-green': '#44bd32',
-                        'dynamic-dark': '#1e1e1e'
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-in-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'float': 'float 3s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' }
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(30px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' }
-                        }
-                    }
-                }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Edu - Join Our Movement</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dynamic-blue': '#00a8ff',
+            'dynamic-green': '#44bd32',
+            'dynamic-dark': '#1e1e1e'
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-in-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+            'float': 'float 3s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
             }
+          }
         }
-    </script>
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .card-shadow {
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .input-focus:focus {
-            border-color: #00a8ff;
-            box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.1);
-            outline: none;
-        }
-        
-        .logo-shadow {
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-        }
-        
-        .button-gradient {
-            background: linear-gradient(135deg, #00a8ff 0%, #0097e6 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .button-gradient:hover {
-            background: linear-gradient(135deg, #0097e6 0%, #00a8ff 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .card-shadow {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    .input-focus:focus {
+      border-color: #00a8ff;
+      box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.1);
+      outline: none;
+    }
+    .logo-shadow {
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    }
+    .button-gradient {
+      background: linear-gradient(135deg, #00a8ff 0%, #0097e6 100%);
+      transition: all 0.3s ease;
+    }
+    .button-gradient:hover {
+      background: linear-gradient(135deg, #0097e6 0%, #00a8ff 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
+    }
+  </style>
 </head>
 <body class="min-h-screen gradient-bg">
-    <!-- Navigation -->
-    <nav class="bg-white/10 backdrop-blur-md border-b border-white/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-3">
-                    <div class="logo-shadow">
-                        <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="100" fill="black"/>
-                            <!-- Dynamic feather/quill design -->
-                            <path d="M60 100 Q80 60, 120 80 Q140 60, 160 90 Q150 110, 130 100 Q120 120, 100 110 Q80 120, 70 100 Z" 
-                                  fill="#00a8ff" stroke="#0097e6" stroke-width="2"/>
-                            <path d="M70 100 Q90 90, 110 100 Q130 90, 150 100" 
-                                  fill="none" stroke="#44bd32" stroke-width="3"/>
-                            <!-- Signature-like line -->
-                            <path d="M60 130 Q100 125, 140 130" 
-                                  fill="none" stroke="#87ceeb" stroke-width="2"/>
-                            <!-- Text -->
-                            <text x="100" y="160" text-anchor="middle" fill="#44bd32" font-family="Arial, sans-serif" font-size="14" font-weight="bold">DYNAMIC EDU SERVICES</text>
-                            <text x="100" y="175" text-anchor="middle" fill="#44bd32" font-family="Arial, sans-serif" font-size="8">EMPOWERING YOUR FUTURE</text>
-                        </svg>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold text-white">Dynamic Edu</h1>
-                        <p class="text-sm text-white/80">Empowering Your Future</p>
-                    </div>
-                </div>
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="#" class="text-white/80 hover:text-white transition-colors">About</a>
-                    <a href="#" class="text-white/80 hover:text-white transition-colors">Services</a>
-                    <a href="#" class="text-white/80 hover:text-white transition-colors">Contact</a>
-                </div>
-            </div>
+  <!-- Navigation -->
+  <nav class="bg-white/10 backdrop-blur-md border-b border-white/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-3">
+          <div class="logo-shadow">
+            <!-- Logo SVG -->
+            <svg width="50" height="50" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="100" fill="black"/>
+              <path d="M60 100 Q80 60, 120 80 Q140 60, 160 90 Q150 110, 130 100 Q120 120, 100 110 Q80 120, 70 100 Z" fill="#00a8ff" stroke="#0097e6" stroke-width="2"/>
+              <path d="M70 100 Q90 90, 110 100 Q130 90, 150 100" fill="none" stroke="#44bd32" stroke-width="3"/>
+              <path d="M60 130 Q100 125, 140 130" fill="none" stroke="#87ceeb" stroke-width="2"/>
+              <text x="100" y="160" text-anchor="middle" fill="#44bd32" font-family="Arial" font-size="14" font-weight="bold">DYNAMIC EDU SERVICES</text>
+              <text x="100" y="175" text-anchor="middle" fill="#44bd32" font-family="Arial" font-size="8">EMPOWERING YOUR FUTURE</text>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-white">Dynamic Edu</h1>
+            <p class="text-sm text-white/80">Empowering Your Future</p>
+          </div>
         </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="flex-1 flex items-center justify-center px-4 py-12">
-        <div class="max-w-4xl w-full">
-            <!-- Hero Section -->
-            <div class="text-center mb-12 animate-fade-in">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                    Join the <span class="text-dynamic-green">Movement</span>
-                </h1>
-                <p class="text-xl text-white/90 mb-2">Transform Education, Empower Lives</p>
-                <p class="text-lg text-white/70 max-w-2xl mx-auto">
-                    Be part of a revolutionary educational platform that connects passionate educators with eager learners worldwide.
-                </p>
-            </div>
-
-            <!-- Registration Form -->
-            <div class="bg-white rounded-3xl card-shadow p-8 md:p-12 animate-slide-up">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Start Your Journey</h2>
-                    <p class="text-gray-600">Share your expertise and join our community of educators</p>
-                </div>
-
-                <form id="registrationForm" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="relative">
-                            <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                            <input type="text" name="fullName" placeholder="Full Name" 
-                                   class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus transition-all duration-300" required>
-                        </div>
-                        <div class="relative">
-                            <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                            <input type="email" name="email" placeholder="Email Address" 
-                                   class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus transition-all duration-300" required>
-                        </div>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="relative">
-                            <i class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                            <input type="tel" name="phone" placeholder="Phone Number" 
-                                   class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus transition-all duration-300" required>
-                        </div>
-                        <div class="relative">
-                            <i class="fas fa-map-marker-alt absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                            <input type="text" name="city" placeholder="City & State" 
-                                   class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus transition-all duration-300" required>
-                        </div>
-                    </div>
-
-                    <div class="relative">
-                        <i class="fas fa-lightbulb absolute left-3 top-4 text-gray-400"></i>
-                        <input type="text" name="skills" placeholder="Skills You Want to Share (e.g., Mathematics, Programming, Art)" 
-                               class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus transition-all duration-300" required>
-                    </div>
-
-                    <div class="relative">
-                        <i class="fas fa-graduation-cap absolute left-3 top-4 text-gray-400"></i>
-                        <textarea name="experience" placeholder="Briefly describe your experience and qualifications" 
-                                  class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus transition-all duration-300 resize-none" 
-                                  rows="4"></textarea>
-                    </div>
-
-                    <div class="relative">
-                        <i class="fas fa-heart absolute left-3 top-4 text-gray-400"></i>
-                        <textarea name="vision" placeholder="Why do you want to join this movement? What impact do you hope to make?" 
-                                  class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus transition-all duration-300 resize-none" 
-                                  rows="4"></textarea>
-                    </div>
-
-                    <div class="pt-4">
-                        <button type="submit" 
-                                class="w-full button-gradient text-white font-semibold py-4 px-8 rounded-lg transform transition-all duration-300 hover:scale-105">
-                            <i class="fas fa-paper-plane mr-2"></i>
-                            Join the Movement
-                        </button>
-                    </div>
-                </form>
-
-                <!-- Success Message -->
-                <div id="successMessage" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
-                        <div>
-                            <h3 class="text-green-800 font-semibold">Welcome to Dynamic Edu!</h3>
-                            <p class="text-green-600">Your registration has been submitted successfully. We'll contact you soon!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Features Section -->
-            <div class="mt-16 grid md:grid-cols-3 gap-8 animate-fade-in">
-                <div class="text-center text-white">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4 animate-float">
-                        <i class="fas fa-users text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Global Community</h3>
-                    <p class="text-white/80">Connect with educators and learners from around the world</p>
-                </div>
-                <div class="text-center text-white">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4 animate-float" style="animation-delay: 0.5s;">
-                        <i class="fas fa-rocket text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Innovative Platform</h3>
-                    <p class="text-white/80">Cutting-edge tools for modern education</p>
-                </div>
-                <div class="text-center text-white">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4 animate-float" style="animation-delay: 1s;">
-                        <i class="fas fa-certificate text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Recognition</h3>
-                    <p class="text-white/80">Get certified and recognized for your expertise</p>
-                </div>
-            </div>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#" class="text-white/80 hover:text-white transition-colors">About</a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors">Services</a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors">Contact</a>
         </div>
+      </div>
     </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="bg-dynamic-dark text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <svg width="40" height="40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="100" fill="black"/>
-                            <path d="M60 100 Q80 60, 120 80 Q140 60, 160 90 Q150 110, 130 100 Q120 120, 100 110 Q80 120, 70 100 Z" 
-                                  fill="#00a8ff" stroke="#0097e6" stroke-width="2"/>
-                            <path d="M70 100 Q90 90, 110 100 Q130 90, 150 100" 
-                                  fill="none" stroke="#44bd32" stroke-width="3"/>
-                            <path d="M60 130 Q100 125, 140 130" 
-                                  fill="none" stroke="#87ceeb" stroke-width="2"/>
-                            <text x="100" y="160" text-anchor="middle" fill="#44bd32" font-family="Arial, sans-serif" font-size="14" font-weight="bold">DYNAMIC EDU</text>
-                            <text x="100" y="175" text-anchor="middle" fill="#44bd32" font-family="Arial, sans-serif" font-size="8">SERVICES</text>
-                        </svg>
-                        <div>
-                            <h3 class="font-bold text-lg">Dynamic Edu Services</h3>
-                            <p class="text-dynamic-green text-sm">Empowering Your Future</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300">
-                        Transforming education through innovative technology and passionate educators worldwide.
-                    </p>
-                </div>
+  <!-- Main Content -->
+  <div class="flex-1 flex items-center justify-center px-4 py-12">
+    <div class="max-w-4xl w-full">
+      <!-- Hero Section -->
+      <div class="text-center mb-12 animate-fade-in">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+          Join the <span class="text-dynamic-green">Movement</span>
+        </h1>
+        <p class="text-xl text-white/90 mb-2">Transform Education, Empower Lives</p>
+        <p class="text-lg text-white/70 max-w-2xl mx-auto">
+          Be part of a revolutionary educational platform that connects passionate educators with eager learners worldwide.
+        </p>
+      </div>
 
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">About Us</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">Our Services</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">Educators</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">Students</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">Careers</a></li>
-                    </ul>
-                </div>
-
-                <!-- Support -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Support</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">Help Center</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-4">Get in Touch</h4>
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-envelope text-dynamic-blue"></i>
-                            <span class="text-gray-300">dynamicedu1@gmail.com</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-phone text-dynamic-blue"></i>
-                            <span class="text-gray-300">+1 (555) 123-4567</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-map-marker-alt text-dynamic-blue"></i>
-                            <span class="text-gray-300">Global Education Hub</span>
-                        </div>
-                    </div>
-                    <!-- Social Media -->
-                    <div class="mt-6 flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors text-xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors text-xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors text-xl">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="text-gray-300 hover:text-dynamic-blue transition-colors text-xl">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Footer -->
-            <div class="mt-8 pt-8 border-t border-gray-600 text-center">
-                <p class="text-gray-300">
-                    © 2025 Dynamic Edu Services. All rights reserved. 
-                    <span class="text-dynamic-green">Empowering minds, shaping futures.</span>
-                </p>
-            </div>
+      <!-- Registration Form -->
+      <div class="bg-white rounded-3xl card-shadow p-8 md:p-12 animate-slide-up">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Start Your Journey</h2>
+          <p class="text-gray-600">Share your expertise and join our community of educators</p>
         </div>
-    </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Form submission handler
-        document.getElementById('registrationForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const form = e.target;
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
+        <form id="registrationForm" class="space-y-6" onsubmit="handleSubmit(event)">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="relative">
+              <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              <input type="text" name="fullName" placeholder="Full Name" class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus" required>
+            </div>
+            <div class="relative">
+              <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              <input type="email" name="email" placeholder="Email Address" class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus" required>
+            </div>
+          </div>
 
-            // Add loading state
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
-            submitButton.disabled = true;
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="relative">
+              <i class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              <input type="tel" name="phone" placeholder="Phone Number" class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus" required>
+            </div>
+            <div class="relative">
+              <i class="fas fa-map-marker-alt absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              <input type="text" name="city" placeholder="City & State" class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-lg input-focus" required>
+            </div>
+          </div>
 
-            try {
-                const response = await fetch('/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
+          <button type="submit" class="w-full py-3 px-6 text-white text-lg font-bold rounded-xl button-gradient">
+            Submit & Join
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 
-                if (response.ok) {
-                    document.getElementById('successMessage').classList.remove('hidden');
-                    form.reset();
-                    form.style.opacity = '0.7';
-                    submitButton.innerHTML = '<i class="fas fa-check mr-2"></i>Submitted Successfully!';
-                } else {
-                    throw new Error('Submission failed');
-                }
-            } catch (error) {
-                alert('Submission failed. Please try again.');
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Form field animations
-        const inputs = document.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.querySelector('i').style.color = '#00a8ff';
-            });
-            
-            input.addEventListener('blur', function() {
-                if (!this.value) {
-                    this.parentElement.querySelector('i').style.color = '#9ca3af';
-                }
-            });
-        });
-    </script>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      alert("Thank you for joining Dynamic Edu! We’ll be in touch.");
+      // You can also handle sending form data to a server here
+      document.getElementById('registrationForm').reset();
+    }
+  </script>
 </body>
 </html>
