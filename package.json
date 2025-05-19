@@ -1,0 +1,29 @@
+{
+  "name": "dynamic-edu-registration",
+  "version": "1.0.0",
+  "description": "Dynamic Edu Registration System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "html-pdf": "^3.0.1",
+    "nodemailer": "^6.10.1",
+    "pdfkit": "^0.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "education",
+    "registration",
+    "nodejs"
+  ],
+  "author": "Dynamic Edu",
+  "license": "MIT"
+}
